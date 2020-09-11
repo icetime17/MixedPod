@@ -1,5 +1,7 @@
 # MixedPod
 
+Swift与Objective-C的混编，其实很简单！
+
 ## 使用场景
 
 1. pod中Swift调用其内部OC：不需要特殊处理。MixedPod-umbrella.h中已经添加了OC头文件。
@@ -23,4 +25,4 @@
 ## 疑问
 
 1. DemoMixedPod-Swift.h中包含了项目中所有的可以给OC使用的Swift函数、类、协议等。因此大项目中，该文件会很大，尤其是有一些相关的代码修改，会导致生成该文件耗时且容易出错。为啥不考虑进行拆分？
-2. pod中的Swift调用pod中的OC，不需要MixedPod-bridging-header.h也可以。是不是MixedPod-umbrella.h的关系？
+2. pod中的Swift调用pod中的OC，不需要MixedPod-bridging-header.h也可以。应该是MixedPod-umbrella.h的关系，可以好好研究一些```Module```和这个```umbrella.h```文件
